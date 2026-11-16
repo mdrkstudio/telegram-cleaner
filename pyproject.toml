@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "mdrk-telegram-cleaner"
+version = "0.1.0"
+description = "Desktop message management for Telegram channels and supergroups"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "PolyForm-Noncommercial-1.0.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY.md"]
+authors = [{name = "MDRK Studio"}]
+dependencies = ["telethon>=1.45,<2", "PySide6-Essentials>=6.6,<7", "qrcode[pil]>=8,<9"]
+[project.scripts]
+telegram-cleaner = "delete_posts_gui:main"
+[project.urls]
+Homepage = "https://mdrkstudio.ru"
+Repository = "https://github.com/mdrkstudio/telegram-cleaner"
+[tool.setuptools]
+py-modules = ["delete_posts_gui"]
